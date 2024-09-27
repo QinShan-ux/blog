@@ -1,0 +1,214 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Blog.Service.Core.csproj": {}
+  },
+  "projects": {
+    "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\Blog.Service.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\Blog.Service.Common.csproj",
+        "projectName": "Blog.Service.Common",
+        "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\Blog.Service.Common.csproj",
+        "packagesPath": "C:\\Users\\HUAWEI\\.nuget\\packages\\",
+        "outputPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HUAWEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj": {
+                "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "SqlSugar": {
+              "target": "Package",
+              "version": "[5.1.4.167, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Blog.Service.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Blog.Service.Core.csproj",
+        "projectName": "Blog.Service.Core",
+        "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Blog.Service.Core.csproj",
+        "packagesPath": "C:\\Users\\HUAWEI\\.nuget\\packages\\",
+        "outputPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HUAWEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\Blog.Service.Common.csproj": {
+                "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\Blog.Service.Common.csproj"
+              },
+              "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj": {
+                "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Mapster.DependencyInjection": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj",
+        "projectName": "Blog.Service.Model",
+        "projectPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj",
+        "packagesPath": "C:\\Users\\HUAWEI\\.nuget\\packages\\",
+        "outputPath": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HUAWEI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "SqlSugarCore": {
+              "target": "Package",
+              "version": "[5.1.4.167, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.7.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

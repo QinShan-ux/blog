@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Blog.Service.ApiService</name>
+    </assembly>
+    <members>
+        <member name="T:Blog.Service.ApiService.Controllers.MemoryController">
+            <summary>
+            日常
+            </summary>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.MemoryController.GetSayInfo(Blog.Service.Model.Dto.Memory.MemoryInput)">
+            <summary>
+            获取日常
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Blog.Service.ApiService.Controllers.PlanController">
+            <summary>
+            博客
+            </summary>
+        </member>
+        <member name="F:Blog.Service.ApiService.Controllers.PlanController.PlanService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.PlanController.#ctor(Blog.Service.Core.Plan.IPlanService)">
+            <summary>
+            
+            </summary>
+            <param name="planService"></param>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.PlanController.GetPlanInfo(System.Int64)">
+            <summary>
+            获取计划详情
+            </summary>
+            <returns>
+            </returns>
+        </member>
+        <member name="T:Blog.Service.ApiService.Controllers.SentenceController">
+            <summary>
+            每日一句
+            </summary>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.SentenceController.GetSentence(System.Int64)">
+            <summary>
+            获取句子
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.SentenceController.InsertSentence(Blog.Service.Model.Entities.SentenceEntity)">
+            <summary>
+            添加
+            </summary>
+            <param name="entity"></param>
+        </member>
+        <member name="M:Blog.Service.ApiService.Controllers.SentenceController.GetSentences">
+            <summary>
+            获取全部的句子
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

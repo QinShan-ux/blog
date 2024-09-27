@@ -1,0 +1,14 @@
+@Blog.Service.ApiService_HostAddress = http://localhost:5172
+
+GET {{Blog.Service.ApiService_HostAddress}}/weatherforecast/
+Accept: application/json
+
+
+###
+POST {{Blog.Service.ApiService_HostAddress}}/plan/GetPlanInfo
+Content-Type: application/json
+
+{
+  "Id": 123,
+   "Plan": "hello"
+}

@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Blog.Service.Model</name>
+    </assembly>
+    <members>
+        <member name="P:Blog.Service.Model.Dto.Memory.MemoryInfoDto.Title">
+            <summary>
+            主题
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Memory.MemoryInfoDto.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="F:Blog.Service.Model.Dto.Memory.MemoryInfoDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Memory.MemoryInfoDto.VisitCount">
+            <summary>
+            访问次数
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Memory.MemoryInput.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Memory.MemoryInput.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="T:Blog.Service.Model.Dto.Plan.PlanInfoDto">
+            <summary>
+            获取计划详情
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.Plan">
+            <summary>
+            计划
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.InspirationList">
+            <summary>
+            灵感
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.Trouble">
+            <summary>
+            问题
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.SuccessTag">
+            <summary>
+            完成
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInfoDto.SuccessTime">
+            <summary>
+            完成时间
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInput.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Dto.Plan.PlanInput.Plan">
+            <summary>
+            计划
+            </summary>
+        </member>
+        <member name="T:Blog.Service.Model.Dto.Sentence.SentenceDto">
+            <summary>
+            句子dto
+            </summary>
+        </member>
+        <member name="T:Blog.Service.Model.Entities.MemoryEntity">
+            <summary>
+            生活日常 （回忆）
+            </summary>
+        </member>
+        <member name="T:Blog.Service.Model.Entities.SentenceEntity">
+            <summary>
+            每日一句
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Entities.SentenceEntity.Id">
+            <summary>
+            id
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Entities.SentenceEntity.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Entities.SentenceEntity.UId">
+            <summary>
+            访客id
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Entities.SentenceEntity.Up">
+            <summary>
+            赞同
+            </summary>
+        </member>
+        <member name="P:Blog.Service.Model.Entities.SentenceEntity.CreateTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+    </members>
+</doc>
