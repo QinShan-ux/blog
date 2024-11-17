@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "D:\\Programme Project\\.net\\demo01\\Blog\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{976E4FB7-8206-409F-8B19-5888198A0137}|src\\Blog.Service.Model\\Blog.Service.Model.csproj|d:\\programme project\\.net\\demo01\\blog\\src\\blog.service.model\\blog.service.model.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{976E4FB7-8206-409F-8B19-5888198A0137}|src\\Blog.Service.Model\\Blog.Service.Model.csproj|solutionrelative:src\\blog.service.model\\blog.service.model.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+      "AbsoluteMoniker": "D:0:0:{F915BB15-6781-4FCE-B2A4-030A610E4991}|src\\Blog.Service.Core\\Blog.Service.Core.csproj|d:\\programme project\\.net\\demo01\\blog\\src\\blog.service.core\\sentence\\sentenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F915BB15-6781-4FCE-B2A4-030A610E4991}|src\\Blog.Service.Core\\Blog.Service.Core.csproj|solutionrelative:src\\blog.service.core\\sentence\\sentenceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4FDE6645-8F5F-4082-9537-D8D6B4D3CC76}|src\\Blog.Service.Common\\Blog.Service.Common.csproj|d:\\programme project\\.net\\demo01\\blog\\src\\blog.service.common\\dbcontect\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4FDE6645-8F5F-4082-9537-D8D6B4D3CC76}|src\\Blog.Service.Common\\Blog.Service.Common.csproj|solutionrelative:src\\blog.service.common\\dbcontect\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{50CDFBCC-B201-4A14-9080-73892C03F108}|src\\Blog.Service.ApiService\\Blog.Service.ApiService.csproj|d:\\programme project\\.net\\demo01\\blog\\src\\blog.service.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{50CDFBCC-B201-4A14-9080-73892C03F108}|src\\Blog.Service.ApiService\\Blog.Service.ApiService.csproj|solutionrelative:src\\blog.service.apiservice\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{976E4FB7-8206-409F-8B19-5888198A0137}|src\\Blog.Service.Model\\Blog.Service.Model.csproj|d:\\programme project\\.net\\demo01\\blog\\src\\blog.service.model\\blog.service.model.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{976E4FB7-8206-409F-8B19-5888198A0137}|src\\Blog.Service.Model\\Blog.Service.Model.csproj|solutionrelative:src\\blog.service.model\\blog.service.model.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,45 +22,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Blog.Service.Model.xml",
-              "DocumentMoniker": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.xml",
-              "RelativeDocumentMoniker": "src\\Blog.Service.Model\\Blog.Service.Model.xml",
-              "ToolTip": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.xml",
-              "RelativeToolTip": "src\\Blog.Service.Model\\Blog.Service.Model.xml",
-              "ViewState": "AQIAADAAAAAAAAAAAADwv0MAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2024-09-03T18:45:24.684Z",
+              "DocumentIndex": 1,
+              "Title": "DbContext.cs",
+              "DocumentMoniker": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\DbContect\\DbContext.cs",
+              "RelativeDocumentMoniker": "src\\Blog.Service.Common\\DbContect\\DbContext.cs",
+              "ToolTip": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Common\\DbContect\\DbContext.cs",
+              "RelativeToolTip": "src\\Blog.Service.Common\\DbContect\\DbContext.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAwBAAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:56:03.717Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SentenceService.cs",
+              "DocumentMoniker": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Sentence\\SentenceService.cs",
+              "RelativeDocumentMoniker": "src\\Blog.Service.Core\\Sentence\\SentenceService.cs",
+              "ToolTip": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Core\\Sentence\\SentenceService.cs",
+              "RelativeToolTip": "src\\Blog.Service.Core\\Sentence\\SentenceService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAAwBoAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-15T06:53:04.116Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Blog.Service.Model",
-              "DocumentMoniker": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj",
-              "RelativeDocumentMoniker": "src\\Blog.Service.Model\\Blog.Service.Model.csproj",
-              "ToolTip": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.Model\\Blog.Service.Model.csproj",
-              "RelativeToolTip": "src\\Blog.Service.Model\\Blog.Service.Model.csproj",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-09-03T18:44:09.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.ApiService\\Program.cs",
               "RelativeDocumentMoniker": "src\\Blog.Service.ApiService\\Program.cs",
               "ToolTip": "D:\\Programme Project\\.net\\demo01\\Blog\\src\\Blog.Service.ApiService\\Program.cs",
               "RelativeToolTip": "src\\Blog.Service.ApiService\\Program.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAuwF4AAAAAAAAA",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAABwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-03T17:30:28.9Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-03T17:30:28.9Z"
             }
           ]
         }

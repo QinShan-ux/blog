@@ -61,5 +61,47 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="M:Blog.Service.ApiService.Extensions.QuartzExtension.Quartz(Microsoft.Extensions.Hosting.IHostBuilder)">
+            <summary>
+            创建定时任务
+            </summary>
+            <param name="ho"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Blog.Service.ApiService.Extensions.ServiceExtension">
+            <summary>
+            service 扩展
+            </summary>
+        </member>
+        <member name="M:Blog.Service.ApiService.Extensions.ServiceExtension.CreateService(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            注册业务service
+            </summary>
+            <param name="service"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Blog.Service.ApiService.Extensions.SwaggerExtension.Swagger(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            swagger 配置
+            </summary>
+            <param name="service"></param>
+            <param name="opt"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Blog.Service.ApiService.TaskTimr.TestTimer.Interval">
+            <summary>
+            时间间隔
+            </summary>
+        </member>
+        <member name="F:Blog.Service.ApiService.TaskTimr.TestTimer.Auto">
+            <summary>
+            执行多少次
+            </summary>
+        </member>
+        <member name="M:Blog.Service.ApiService.TaskTimr.TestTimer.Tasks(System.Object,System.Timers.ElapsedEventArgs)">
+            <summary>
+            任务列表
+            </summary>
+        </member>
     </members>
 </doc>

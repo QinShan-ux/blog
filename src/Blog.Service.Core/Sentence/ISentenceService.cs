@@ -10,4 +10,5 @@ public interface ISentenceService
     Task InsertAsync(SentenceEntity entity);
 
     Task<List<SentenceDto>> GetSentencesAsync();
+    
 }

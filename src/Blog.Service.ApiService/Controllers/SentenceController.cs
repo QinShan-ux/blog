@@ -12,10 +12,11 @@ namespace Blog.Service.ApiService.Controllers;
 [Route("v1/api/[controller]")]
 public class SentenceController : ControllerBase
 {
-    public readonly ISentenceService _SentenceService;
-
-    public SentenceController(ISentenceService sentenceService)
+    public readonly ISentenceService            _SentenceService;
+    private         ILogger<SentenceController> _logger;
+    public SentenceController(ISentenceService sentenceService,ILogger<SentenceController> logger)
     {
+        _logger          = logger;
         _SentenceService = sentenceService;
     }
 
@@ -28,6 +29,10 @@ public class SentenceController : ControllerBase
     public async Task<IActionResult> GetSentence(long id)
     {
         var res = await _SentenceService.GetSentenceAsync(id);
+        if(res is null)
+        {
+            _logger.LogInformation("获取数据失败");
+        }
         return Ok(Result<SentenceDto>.Success(res));
     }
 

@@ -4,6 +4,7 @@ using Blog.Service.Model.Dto.Sentence;
 using Blog.Service.Model.Entities;
 using MapsterMapper;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Blog.Service.Core.Sentence;
 
@@ -11,11 +12,12 @@ public class SentenceService : ISentenceService
 {
     public readonly  DbContext _context;
     private readonly IMapper   _mapper;
-
-    public SentenceService(DbContext context,IMapper mapper)
+    private readonly ILogger<SentenceService> _logger;
+    public SentenceService(DbContext context,IMapper mapper,ILogger<SentenceService> logger)
     {
         _context = context;
         _mapper  = mapper;
+        _logger = logger;
     }
     public async Task<SentenceDto> GetSentenceAsync(long id)
     {
@@ -60,4 +62,6 @@ public class SentenceService : ISentenceService
             .ToListAsync();
         return res;
     }
+
+    
 }
