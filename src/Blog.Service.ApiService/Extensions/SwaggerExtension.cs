@@ -54,6 +54,7 @@ public static class SwaggerExtension
             // 获取XML文档文件路径
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+            Console.WriteLine($"{xmlFile} : {xmlPath}");
             // 添加XML文档注释
             c.IncludeXmlComments(xmlPath);
         });
