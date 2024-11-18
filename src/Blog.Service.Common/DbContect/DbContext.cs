@@ -1,23 +1,26 @@
+using System.Configuration;
 using Blog.Service.Model.Entities;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using SqlSugar;
 
 namespace Blog.Service.Common.DBContect;
 
-public class DbContext(IConfiguration configuration,ILogger<DbContext> _logger)
+public class DbContext(IConfiguration configuration,ILogger<DbContext> logger,IOptions<SqlOptions> options)
 {
-    private readonly string _sqlConnect = configuration.GetSection("ConnectStr:SqlConfigs")["PgSql"] ?? "";
-    private readonly bool   _isCordFirst = (configuration.GetSection("ConnectStr")["IsCodeFirst"] ?? "").ToLowerInvariant().Equals("true") ;
+    // private readonly string _sqlConnect = configuration.GetSection("ConnectStr:SqlConfigs")["PgSql"] ?? "";
+    // private readonly bool   _isCordFirst = (configuration.GetSection("ConnectStr")["IsCodeFirst"] ?? "").ToLowerInvariant().Equals("true") ;
+    
     public SqlSugarClient CreateConnect()
     {
         
         using var client = new SqlSugarClient(new ConnectionConfig()
         {
-            ConnectionString = _sqlConnect,
-            DbType = DbType.PostgreSQL,
+            ConnectionString      = options.Value.PgSql,
+            DbType                = DbType.PostgreSQL,
             IsAutoCloseConnection = true,
-            InitKeyType = InitKeyType.Attribute,
+            InitKeyType           = InitKeyType.Attribute,
             ConfigureExternalServices = new ConfigureExternalServices()
             {
                 EntityService = (x, p) =>
@@ -46,6 +49,7 @@ public class DbContext(IConfiguration configuration,ILogger<DbContext> _logger)
              foreach (var par in pars)
              {
                  Console.WriteLine(par.Value);
+                 logger.LogInformation($"{par.Value}");
              }
          };
          client.Aop.OnLogExecuted = (sql, result) =>
@@ -56,8 +60,7 @@ public class DbContext(IConfiguration configuration,ILogger<DbContext> _logger)
                  Console.WriteLine(item.ToString());
              }
          };
-         
-        return client;
+         return client;
     }
     
 }

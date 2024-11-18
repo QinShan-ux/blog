@@ -15,7 +15,7 @@ builder.Host.UseSerilog((ctx, sp, lc) => lc
     .ReadFrom.Configuration(ctx.Configuration)
     .ReadFrom.Services(sp) 
     .Enrich.FromLogContext()
-    // .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
+    .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
     .WriteTo.File("D:\\网站发布\\log.txt"))
     ;
 // Add services to the container.
@@ -26,6 +26,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 // swagger 配置
 builder.Services.Swagger();
+// 将 appsettings.json 配置文件中的 SqlOptions 绑定到SqlOptions实体
+builder.Services.Configure<SqlOptions>(builder.Configuration.GetSection("SqlOptions"));
 // 配置mapper 映射
 builder.Services.AddSingleton(TypeAdapterConfig.GlobalSettings);
 builder.Services.AddTransient<RegularWork>();
@@ -39,14 +41,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "Blog API V1"); });
-    app.UseHttpsRedirection();
 }
 app.UseCors(options => options
     .AllowAnyOrigin()
     .AllowAnyMethod()
     .AllowAnyHeader());
 
-
+app.UseHttpsRedirection();
 app.UseAuthorization();
 // 使用全局异常处理中间件
 app.UseMiddleware<GlobalExceptionHandlerMiddleware>();

@@ -11,7 +11,6 @@ public static class SwaggerExtension
     /// swagger 配置
     /// </summary>
     /// <param name="service"></param>
-    /// <param name="opt"></param>
     /// <returns></returns>
     public static IServiceCollection Swagger(this IServiceCollection service)
     {
@@ -54,11 +53,9 @@ public static class SwaggerExtension
             //c.SchemaFilter<MySchemaFilter>();
             // 获取XML文档文件路径
             var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-
             var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
             // 添加XML文档注释
             c.IncludeXmlComments(xmlPath);
-            
         });
         return service;
     }
