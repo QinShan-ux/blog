@@ -1,13 +1,11 @@
-using System.Text;
 using Blog.Service.ApiService.Extensions;
-using Blog.Service.ApiService.Middlewear;
+using Blog.Service.ApiService.Middle;
 using Blog.Service.ApiService.Quartz;
 using Blog.Service.Common.DBContect;
 using Mapster;
 using MapsterMapper;
 using Serilog;
 using Serilog.Sinks.SystemConsole.Themes;
-using SqlSugar;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +16,7 @@ builder.Host.UseSerilog((ctx, sp, lc) => lc
     .WriteTo.Console(theme: AnsiConsoleTheme.Sixteen)
     .WriteTo.File("D:\\网站发布\\log.txt"))
     ;
+
 // Add services to the container.
 // 定时任务
 // builder.Host.Quartz();
@@ -26,7 +25,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 // swagger 配置
 builder.Services.Swagger();
-// 将 appsettings.json 配置文件中的 SqlOptions 绑定到SqlOptions实体
+// 将 配置文件中的 SqlOptions 绑定到SqlOptions实体
 builder.Services.Configure<SqlOptions>(builder.Configuration.GetSection("SqlOptions"));
 // 配置mapper 映射
 builder.Services.AddSingleton(TypeAdapterConfig.GlobalSettings);

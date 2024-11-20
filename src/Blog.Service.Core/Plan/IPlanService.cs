@@ -7,5 +7,5 @@ namespace Blog.Service.Core.Plan;
 public interface IPlanService
 {
    public Task<PlanInfoDto> GetPlanInfoAsync(long id);
-   public Task<PlanInfoDto> GetPlanListAsync();
+   public Task<List<PlanInfoDto>> GetPlanListAsync();
 }

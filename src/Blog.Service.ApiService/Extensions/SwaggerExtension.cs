@@ -1,14 +1,15 @@
 using System.Reflection;
 using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Blog.Service.ApiService.Extensions;
-
+/// <summary>
+/// 配置swagger
+/// </summary>
 public static class SwaggerExtension
 {
     
     /// <summary>
-    /// swagger 配置
+    /// swagger 配置 扩展方法
     /// </summary>
     /// <param name="service"></param>
     /// <returns></returns>

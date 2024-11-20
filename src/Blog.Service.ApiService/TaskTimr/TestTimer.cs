@@ -1,8 +1,5 @@
 using System.Timers;
-using Blog.Service.Core.Sentence;
-using Flurl;
 using Flurl.Http;
-using Timer = System.Timers.Timer;
 
 namespace Blog.Service.ApiService.TaskTimr;
 

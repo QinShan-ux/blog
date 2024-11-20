@@ -1,31 +1,20 @@
-using System.Linq.Expressions;
 using Blog.Service.Common.DBContect;
 using Blog.Service.Model.Dto.Sentence;
 using Blog.Service.Model.Entities;
 using MapsterMapper;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
 namespace Blog.Service.Core.Sentence;
 
-public class SentenceService : ISentenceService
+public class SentenceService(DbContext context,IMapper mapper,ILogger<SentenceService> logger) : ISentenceService
 {
-    public readonly  DbContext _context;
-    private readonly IMapper   _mapper;
-    private readonly ILogger<SentenceService> _logger;
-    public SentenceService(DbContext context,IMapper mapper,ILogger<SentenceService> logger)
-    {
-        _context = context;
-        _mapper  = mapper;
-        _logger = logger;
-    }
     public async Task<SentenceDto> GetSentenceAsync(long id)
     {
-        using var ctx      = _context.CreateConnect();
+        using var ctx      = context.CreateConnect();
         var       entities = await ctx.Queryable<SentenceEntity>().Where(it => it.Id == id).FirstAsync();
-        return _mapper.Map<SentenceDto>(entities);
+        return mapper.Map<SentenceDto>(entities);
     }
-
+    
     /// <summary>
     /// 添加
     /// </summary>
@@ -34,21 +23,20 @@ public class SentenceService : ISentenceService
     /// <exception cref="NotImplementedException"></exception>
     public async Task InsertAsync(SentenceEntity entity)
     {
-        using var ctx = _context.CreateConnect();
+        using var ctx = context.CreateConnect();
         try
         {
-            await ctx.Insertable<SentenceEntity>(entity)
+            await ctx.Insertable(entity)
                 .InsertColumns(it => new
                 {
-                    it.Content,
-                    it.UId,
-                    it.CreateTime
+                    it.Content
                 })
                 .ExecuteCommandAsync();
         }
         catch (Exception e)
         {
-            Console.WriteLine(e);
+            logger.LogInformation("插入失败");
+            Console.WriteLine(e.Data);
             throw ;
         }
         
@@ -56,7 +44,7 @@ public class SentenceService : ISentenceService
 
     public async Task<List<SentenceDto>> GetSentencesAsync()
     {
-        using var ctx = _context.CreateConnect();
+        using var ctx = context.CreateConnect();
         var       res = await ctx.Queryable<SentenceEntity>()
             .Select<SentenceDto>()
             .ToListAsync();

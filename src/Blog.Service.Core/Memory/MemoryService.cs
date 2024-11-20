@@ -5,22 +5,13 @@ using MapsterMapper;
 
 namespace Blog.Service.Core.Memory;
 
-public class MemoryService : IMemoryService
+public class MemoryService(DbContext context,IMapper mapper) : IMemoryService
 {
-    public readonly  DbContext _context;
-    private readonly IMapper   _mapper;
-
-    public MemoryService(DbContext context,IMapper mapper)
-    {
-        _context = context;
-        _mapper  = mapper;
-    }
-    
     public async Task<MemoryInfoDto> GetMemoryInfoAsync(MemoryInput input)
     {
-        using var ctx      = _context.CreateConnect();
+        using var ctx      = context.CreateConnect();
         var       entities = await ctx.Queryable<MemoryEntity>().Where(it => it.Id == input.Id).FirstAsync();
-        var       res      = _mapper.Map<MemoryInfoDto>(entities);
+        var       res      = mapper.Map<MemoryInfoDto>(entities);
         return res;
     }
 }

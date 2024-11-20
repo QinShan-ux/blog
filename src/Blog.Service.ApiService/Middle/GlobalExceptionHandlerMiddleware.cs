@@ -3,10 +3,17 @@ using Blog.Service.Common.Model;
 using Newtonsoft.Json;
 using Serilog;
 
-namespace Blog.Service.ApiService.Middlewear;
-
+namespace Blog.Service.ApiService.Middle;
+/// <summary>
+/// 全局异常
+/// </summary>
+/// <param name="next"></param>
 public class GlobalExceptionHandlerMiddleware(RequestDelegate next)
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="context"></param>
     public async Task InvokeAsync(HttpContext context)
     {
         try
